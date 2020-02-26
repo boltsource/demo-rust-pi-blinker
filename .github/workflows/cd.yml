@@ -70,6 +70,7 @@ jobs:
 
   build_deploy:
     name: Build and Deploy
+    needs: [check, test, lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
