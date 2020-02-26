@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'src/*.rs'
-      - '.github/*.yml'
+      - '.github/workflows/*.yml'
       - 'Cargo.toml'
       - 'Cargo.lock'
     branches:
