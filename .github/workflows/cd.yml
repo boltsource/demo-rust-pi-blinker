@@ -81,9 +81,9 @@ jobs:
       - name: Install Balena CLI
         run: npm install balena-cli -g --production
       - name: Login with Balena CLI via Token
-          env:
-            BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
-            BALENA_APP_NAME: ${{ secrets.BALENA_APP_NAME }}
+        env:
+          BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
+          BALENA_APP_NAME: ${{ secrets.BALENA_APP_NAME }}
         run: balena login --token $BALENA_API_KEY
       - name: Push to Balena for Build and Deploy
         run: balena push $BALENA_APP_NAME
